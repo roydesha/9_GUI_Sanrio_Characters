@@ -1,9 +1,15 @@
 package com.example.test;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -22,6 +28,7 @@ public class HelloController {
     public RadioButton maruButton;
     public RadioButton keroppiButton;
     public TextArea backgroundArea;
+    public Pane pane;
 
     Image image;
     Image image2;
@@ -41,6 +48,7 @@ public class HelloController {
         currentImgNumber = 1;
         gudetamaButton.setSelected(true);
         backgroundArea.setText("Name:Gudetama\nSpecies:Egg Yolk\nLikes:napping,watching tv\nDislikes:being active");
+        pane.setBackground(new Background(new BackgroundFill(Color.web("#FFD580"), CornerRadii.EMPTY, Insets.EMPTY)));
 
         FileInputStream input2 = new FileInputStream("src/badtz.png");
         image2 = new Image(input2);
@@ -67,6 +75,7 @@ public class HelloController {
                 pochaccoButton.setSelected(false);
                 gudetamaButton.setSelected(false);
                 backgroundArea.setText("Name:Badtz-Maru \nSpecies:Bird \nSkills: Pretending to play the piano");
+                pane.setBackground(new Background(new BackgroundFill(Color.web("#D3D3D3"), CornerRadii.EMPTY, Insets.EMPTY)));
 
             } else if (choice.toString().equalsIgnoreCase("Keroppi")) {
                 characters.setImage(image3);
@@ -78,6 +87,8 @@ public class HelloController {
                 gudetamaButton.setSelected(false);
                 maruButton.setSelected(false);
                 backgroundArea.setText("Name:Keroppi\nSpecies:Frog\nLikes:playing games");
+                pane.setBackground(new Background(new BackgroundFill(Color.web("#32CD32"), CornerRadii.EMPTY, Insets.EMPTY)));
+
 
             } else if (choice.toString().equalsIgnoreCase("Pompompurin")) {
                 characters.setImage(image4);
@@ -89,6 +100,7 @@ public class HelloController {
                 maruButton.setSelected(false);
                 keroppiButton.setSelected(false);
                 backgroundArea.setText("Name:Pompompurin\nSpecies:Dog\nLikes:milk,pudding");
+                pane.setBackground(new Background(new BackgroundFill(Color.web("#D2B48C"), CornerRadii.EMPTY, Insets.EMPTY)));
 
             } else if (choice.toString().equalsIgnoreCase("Pochacco")) {
                 characters.setImage(image5);
@@ -100,6 +112,7 @@ public class HelloController {
                 keroppiButton.setSelected(false);
                 pomButton.setSelected(false);
                 backgroundArea.setText("Name:Pochacco\nSpecies:Dog\nLikes:Banana Ice Cream");
+                pane.setBackground(new Background(new BackgroundFill(Color.web("#ADD8E6"), CornerRadii.EMPTY, Insets.EMPTY)));
 
             } else {
                 characters.setImage(image);
@@ -111,6 +124,7 @@ public class HelloController {
                 pomButton.setSelected(false);
                 pochaccoButton.setSelected(false);
                 backgroundArea.setText("Name:Gudetama\nSpecies:Egg Yolk\nLikes:napping,watching tv\nDislikes:being active");
+                pane.setBackground(new Background(new BackgroundFill(Color.web("#FFD580"), CornerRadii.EMPTY, Insets.EMPTY)));
             }
 
         });
@@ -136,6 +150,8 @@ public class HelloController {
             pomButton.setSelected(false);
             pochaccoButton.setSelected(false);
             backgroundArea.setText("Name:Gudetama\nSpecies:Egg Yolk\nLikes:napping,watching tv\nDislikes:being active");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#FFD580"), CornerRadii.EMPTY, Insets.EMPTY)));
+
         }
         if (currentImgNumber == 2) {
             characters.setImage(image2);
@@ -147,6 +163,7 @@ public class HelloController {
             pochaccoButton.setSelected(false);
             gudetamaButton.setSelected(false);
             backgroundArea.setText("Name:Badtz-Maru \nSpecies:Bird \nSkills: Pretending to play the piano");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#D3D3D3"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (currentImgNumber == 3) {
             characters.setImage(image3);
@@ -158,6 +175,8 @@ public class HelloController {
             gudetamaButton.setSelected(false);
             maruButton.setSelected(false);
             backgroundArea.setText("Name:Keroppi\nSpecies:Frog\nLikes:playing games");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#32CD32"), CornerRadii.EMPTY, Insets.EMPTY)));
+
         }
         if (currentImgNumber == 4) {
             characters.setImage(image4);
@@ -169,6 +188,7 @@ public class HelloController {
             maruButton.setSelected(false);
             keroppiButton.setSelected(false);
             backgroundArea.setText("Name:Pompompurin\nSpecies:Dog\nLikes:milk,pudding");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#D2B48C"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (currentImgNumber == 5) {
             characters.setImage(image5);
@@ -180,6 +200,7 @@ public class HelloController {
             keroppiButton.setSelected(false);
             pomButton.setSelected(false);
             backgroundArea.setText("Name:Pochacco\nSpecies:Dog\nLikes:Banana Ice Cream");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#ADD8E6"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
 
@@ -202,6 +223,7 @@ public class HelloController {
             pochaccoButton.setSelected(false);
             gudetamaButton.setSelected(false);
             backgroundArea.setText("Name:Badtz-Maru \nSpecies:Bird \nSkills: Pretending to play the piano");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#D3D3D3"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (currentImgNumber == 3) {
             characters.setImage(image3);
@@ -213,6 +235,7 @@ public class HelloController {
             gudetamaButton.setSelected(false);
             maruButton.setSelected(false);
             backgroundArea.setText("Name:Keroppi\nSpecies:Frog\nLikes:playing games");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#32CD32"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (currentImgNumber == 4) {
             characters.setImage(image4);
@@ -224,6 +247,7 @@ public class HelloController {
             maruButton.setSelected(false);
             keroppiButton.setSelected(false);
             backgroundArea.setText("Name:Pompompurin\nSpecies:Dog\nLikes:milk,pudding");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#D2B48C"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (currentImgNumber == 5) {
             characters.setImage(image5);
@@ -235,6 +259,7 @@ public class HelloController {
             keroppiButton.setSelected(false);
             pomButton.setSelected(false);
             backgroundArea.setText("Name:Pochacco\nSpecies:Dog\nLikes:Banana Ice Cream");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#ADD8E6"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (currentImgNumber == 1) {
             characters.setImage(image);
@@ -245,6 +270,7 @@ public class HelloController {
             pomButton.setSelected(false);
             pochaccoButton.setSelected(false);
             backgroundArea.setText("Name:Gudetama\nSpecies:Egg Yolk\nLikes:napping,watching tv\nDislikes:being active");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#FFD580"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
     }
 
@@ -261,30 +287,35 @@ public class HelloController {
             currentImgNumber = 1;
             characterBox.setValue("Gudetama");
             backgroundArea.setText("Name:Gudetama\nSpecies:Egg Yolk\nLikes:napping,watching tv\nDislikes:being active");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#FFD580"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (maruButton.isSelected()) {
             characters.setImage(image2);
             currentImgNumber = 2;
             characterBox.setValue("Badtz-Maru");
             backgroundArea.setText("Name:Badtz-Maru \nSpecies:Bird \nSkills: Pretending to play the piano");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#D3D3D3"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (keroppiButton.isSelected()) {
             characters.setImage(image3);
             currentImgNumber = 3;
             characterBox.setValue("Keroppi");
             backgroundArea.setText("Name:Keroppi\nSpecies:Frog\nLikes:playing games");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#32CD32"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (pomButton.isSelected()) {
             characters.setImage(image4);
             currentImgNumber = 4;
             characterBox.setValue("Pompompurin");
             backgroundArea.setText("Name:Pompompurin\nSpecies:Dog\nLikes:milk,pudding");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#D2B48C"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if (pochaccoButton.isSelected()) {
             characters.setImage(image5);
             currentImgNumber = 5;
             characterBox.setValue("Pochacco");
             backgroundArea.setText("Name:Pochacco\nSpecies:Dog\nLikes:Banana Ice Cream");
+            pane.setBackground(new Background(new BackgroundFill(Color.web("#ADD8E6"), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
     }
